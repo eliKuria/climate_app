@@ -1,5 +1,5 @@
 import { API_CONFIG } from "./config";
-import type { Coordinates, ForecastData, GeocodeResponse, WeatherData } from "./types";
+import type { Coordinates, ForecastData, GeocodingResponse, WeatherData } from "./types";
 
 class WeatherAPI {
     private createURL(endpoint: string,
@@ -39,13 +39,25 @@ class WeatherAPI {
         return this.fetchData<ForecastData>(url);
     }
 
-    public async reverseGeocode({lat, lon}: Coordinates): Promise<GeocodeResponse[]> {
+    public async reverseGeocode({lat, lon}: Coordinates): Promise<GeocodingResponse[]> {
         const url = this.createURL(`${API_CONFIG.GEO}/reverse`, { 
             lat:lat.toString(), 
             lon:lon.toString(), 
             limit:1,
         });
-        return this.fetchData<GeocodeResponse[]>(url);
+
+        return this.fetchData<GeocodingResponse[]>(url);
+    }
+
+// search location Open Weather API endpoint with /direct
+
+     public async searchLocations(query: string): Promise<GeocodingResponse[]> {
+        const url = this.createURL(`${API_CONFIG.GEO}/direct`, { 
+            q:query, 
+            limit: "5",
+        });
+
+        return this.fetchData<GeocodingResponse[]>(url);
     }
 }
 

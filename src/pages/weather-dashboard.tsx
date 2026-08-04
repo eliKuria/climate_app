@@ -3,6 +3,7 @@ import HourlyTemperature from '@/components/hourly-temperature';
 import WeatherSkeleton from '@/components/loading-skeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
+import FavoriteCities from '@/components/ui/favorite-cities';
 import WeatherDetails from '@/components/weather-details';
 import WeatherForecast from '@/components/weather-forecast';
 import { useGeolocation } from '@/hooks/use-geolocation';
@@ -86,7 +87,8 @@ const handleRefresh = () => {
 
     return (
       <div className="space-y-4">
-        {/* favourite cities */}
+        <FavoriteCities />
+        
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold tracking-tight">My Location</h1>
           <Button
