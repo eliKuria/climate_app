@@ -1,75 +1,25 @@
-# React + TypeScript + Vite
+SkyE Climate App
+A highly responsive, design-centric weather dashboard built with TypeScript, featuring real-time climate data, interactive temperature charts, and seamless city search.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+SkyE Climate App is a modern weather visualization platform engineered for both aesthetic appeal and technical performance. Built with a strictly typed architecture, it delivers real-time weather conditions, 5-day forecasts, and dynamic temperature trends. The application prioritizes a seamless user experience, utilizing clean UI components and highly efficient data-fetching strategies to ensure lightning-fast updates, smart caching, and minimal cognitive load for the user.
 
-Currently, two official plugins are available:
+Key Features
+Real-Time Climate Data: Instant access to current weather conditions, including humidity, wind speed, pressure, and feels-like temperatures.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Interactive Data Visualization: Fluid, responsive charts mapping out daily temperature trends for easy visual consumption.
 
-## React Compiler
+Smart City Search & Favorites: A streamlined command-palette interface to search for global cities and save favorite locations for quick access.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Optimized Performance: Intelligent API request caching and state management to reduce unnecessary network calls and ensure a snappy interface.
 
-## Expanding the ESLint configuration
+Tech Stack
+Language: TypeScript for end-to-end type safety and scalable code structure.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+State Management & Fetching: Tanstack Query (React Query) for robust asynchronous state management, caching, and background data synchronization.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Styling: Tailwind CSS for highly customizable, utility-first styling.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+UI Components: Shadcn UI for accessible, beautifully designed, and modular interface elements.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+Visualizations: Recharts for rendering lightweight, composable, and responsive SVG charts.
