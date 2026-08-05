@@ -1,25 +1,105 @@
-SkyE Climate App
-A highly responsive, design-centric weather dashboard built with TypeScript, featuring real-time climate data, interactive temperature charts, and seamless city search.
+🌤️ SkyE Climate App
+
+(A sleek, modern weather dashboard built for performance and aesthetics)
 
 Overview
-SkyE Climate App is a modern weather visualization platform engineered for both aesthetic appeal and technical performance. Built with a strictly typed architecture, it delivers real-time weather conditions, 5-day forecasts, and dynamic temperature trends. The application prioritizes a seamless user experience, utilizing clean UI components and highly efficient data-fetching strategies to ensure lightning-fast updates, smart caching, and minimal cognitive load for the user.
+
+SkyE Climate App is a highly responsive, design-centric weather visualization platform. It delivers real-time weather conditions, comprehensive 5-day forecasts, and dynamic temperature trends in a clean, distraction-free interface. Engineered with a strictly typed architecture and optimized data-fetching strategies, SkyE ensures lightning-fast updates, smart caching, and a seamless user experience.
 
 Key Features
-Real-Time Climate Data: Instant access to current weather conditions, including humidity, wind speed, pressure, and feels-like temperatures.
 
-Interactive Data Visualization: Fluid, responsive charts mapping out daily temperature trends for easy visual consumption.
+🌍 Real-Time Climate Data: Instant access to current conditions including temperature, humidity, wind speed, pressure, and sunrise/sunset times.
 
-Smart City Search & Favorites: A streamlined command-palette interface to search for global cities and save favorite locations for quick access.
+📈 Interactive Visualizations: Fluid, responsive charts mapping out daily temperature trends for easy visual consumption.
 
-Optimized Performance: Intelligent API request caching and state management to reduce unnecessary network calls and ensure a snappy interface.
+🔍 Smart City Search: A streamlined, command-palette style search interface to quickly locate global cities.
 
-Tech Stack
-Language: TypeScript for end-to-end type safety and scalable code structure.
+⭐ Favorites Management: Save and quickly access weather data for your most visited locations.
 
-State Management & Fetching: Tanstack Query (React Query) for robust asynchronous state management, caching, and background data synchronization.
+⚡ Optimized Performance: Intelligent API request caching and state management to reduce network calls and ensure a snappy interface.
 
-Styling: Tailwind CSS for highly customizable, utility-first styling.
+🛠️ Tech Stack
 
-UI Components: Shadcn UI for accessible, beautifully designed, and modular interface elements.
+This project leverages modern web technologies to deliver a robust and scalable application:
 
-Visualizations: Recharts for rendering lightweight, composable, and responsive SVG charts.
+Language: TypeScript (End-to-end type safety)
+
+Framework/Build Tool: React with Vite
+
+Data Fetching & Caching: TanStack Query (React Query)
+
+Styling: Tailwind CSS
+
+UI Components: shadcn/ui (Accessible, customizable components)
+
+Charts & Visualizations: Recharts
+
+Weather Data: OpenWeather API
+
+Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing.
+
+Prerequisites
+
+Node.js (v18 or higher recommended)
+
+npm or yarn or pnpm
+
+An OpenWeather API Key (Get one free here)
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/elikuria/climate_app.git
+cd climate_app
+
+
+
+Install dependencies:
+
+npm install
+# or yarn install
+# or pnpm install
+
+
+
+Set up Environment Variables:
+
+Create a .env file in the root directory.
+
+Add your OpenWeather API key:
+
+VITE_OPENWEATHER_API_KEY=your_api_key_here
+
+
+
+Run the development server:
+
+npm run dev
+
+
+
+Open http://localhost:5173 (or the port provided in your terminal) to view it in the browser.
+
+Deployment
+
+To build the app for production:
+
+npm run build
+
+
+
+This will generate a dist folder containing the optimized production files, which can be deployed to platforms like Netlify, Vercel, or GitHub Pages.
+
+Note: Remember to add your VITE_OPENWEATHER_API_KEY to the Environment Variables settings in your chosen hosting provider.
+
+
+Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
